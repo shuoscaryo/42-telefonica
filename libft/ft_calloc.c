@@ -6,7 +6,7 @@
 /*   By: orudek <orudek@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 22:29:12 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/13 14:17:23 by orudek           ###   ########.fr       */
+/*   Updated: 2023/03/13 15:04:51 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*calloc(size_t number, size_t size)
 {
 	void	*out;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	out = malloc (number * size);

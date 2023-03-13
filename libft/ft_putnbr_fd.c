@@ -6,7 +6,7 @@
 /*   By: orudek <orudek@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:28:45 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/13 14:33:40 by orudek           ###   ########.fr       */
+/*   Updated: 2023/03/13 16:21:58 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,5 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	ft_putstr_fd(ft_itoa(n), fd);
 }

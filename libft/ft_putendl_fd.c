@@ -6,7 +6,7 @@
 /*   By: orudek <orudek@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:28:42 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/13 14:33:58 by orudek           ###   ########.fr       */
+/*   Updated: 2023/03/13 16:17:33 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	ft_putstr_fd(s,fd);
+	ft_putchar_fd('\n',fd);
 }

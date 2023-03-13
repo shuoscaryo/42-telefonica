@@ -6,18 +6,17 @@
 /*   By: orudek <orudek@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 15:06:00 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/13 14:40:41 by orudek           ###   ########.fr       */
+/*   Updated: 2023/03/13 16:15:19 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, unsigned int len)
+void	*ft_memcpy(void *dst, const void *src, size_t len)
 {
-	unsigned int	i;
-	int				src_len;
-	char			*out;
-	const char		*in;
+	size_t		i;
+	char		*out;
+	const char	*in;
 
 	out = dst;
 	in = src;

@@ -6,13 +6,13 @@
 /*   By: orudek <orudek@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 16:09:40 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/13 14:28:08 by orudek           ###   ########.fr       */
+/*   Updated: 2023/03/13 16:11:08 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, unsigned int n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const char	*str;
 

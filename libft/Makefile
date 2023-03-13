@@ -57,19 +57,19 @@ BONUS_OBJ = $(BONUS_SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ) $(INCLUDE)
-	$(lIB) $(NAME) $(OBJ)
+	@$(lIB) $(NAME) $(OBJ)
 
 bonus: $(OBJ) $(BONUS_OBJ) $(INCLUDE)
-	$(LIB) $(NAME) $(BONUS_OBJ) $(OBJ)
+	@$(LIB) $(NAME) $(BONUS_OBJ) $(OBJ)
 
 %.o: %.c
-	$(CC) $(CCFLAGS) -c -o $@ $<
+	@$(CC) $(CCFLAGS) -c -o $@ $<
 
 clean:
-	$(RM) $(OBJ) $(BONUS_OBJ)
+	@$(RM) $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 
