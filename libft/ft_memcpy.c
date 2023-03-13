@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orudek <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: orudek <orudek@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 15:06:00 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/07 15:09:17 by orudek           ###   ########.fr       */
+/*   Updated: 2023/03/13 14:28:16 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, unsigned int len)
 {

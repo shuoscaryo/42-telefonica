@@ -6,7 +6,13 @@
 /*   By: orudek <orudek@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:46:32 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/13 12:54:09 by orudek           ###   ########.fr       */
+/*   Updated: 2023/03/13 14:30:29 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+
+}

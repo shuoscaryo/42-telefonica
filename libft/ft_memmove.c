@@ -3,22 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orudek <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: orudek <orudek@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 14:35:02 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/07 15:37:01 by orudek           ###   ########.fr       */
+/*   Updated: 2023/03/13 14:28:26 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_strlen(char *str)
-{
-	int	count;
-
-	count = 0;
-	while (*str++)
-		count++;
-	return (count);
-}
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, unsigned int len)
 {
