@@ -6,7 +6,7 @@
 /*   By: orudek <orudek@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 15:06:00 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/13 14:28:16 by orudek           ###   ########.fr       */
+/*   Updated: 2023/03/13 14:40:41 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	*ft_memcpy(void *dst, const void *src, unsigned int len)
 	in = src;
 	i = 0;
 	while (i++ < len)
-		out++ = in++;
+		*out++ = *in++;
 	return (dst);
 }

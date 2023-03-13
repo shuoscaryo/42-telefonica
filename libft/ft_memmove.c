@@ -6,7 +6,7 @@
 /*   By: orudek <orudek@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 14:35:02 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/13 14:28:26 by orudek           ###   ########.fr       */
+/*   Updated: 2023/03/13 15:00:05 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,11 @@ void	*ft_memmove(void *dst, const void *src, unsigned int len)
 	out = dst;
 	in = src;
 	i = 0;
-	if (out < in) // no esta terminado
 	while (i < len)
 	{
 		if (out >= in && out <= in + src_len)
 			break ;
-		out++ = in++;
+		*out++ = *in++;
 		i++;
 	}
 	return (dst);
