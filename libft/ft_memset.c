@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orudek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 14:33:22 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/07 14:33:51 by orudek           ###   ########.fr       */
+/*   Created: 2023/03/07 14:17:08 by orudek            #+#    #+#             */
+/*   Updated: 2023/03/07 14:32:51 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void *b, unsigned int len)
+void	*ft_memset(void *b, int c, unsigned int len)
 {
 	int	i;
 
 	i = 0;
 	while (i < len)
-		((unsigned char *)b)[i++] = 0;
+		((unsigned char *)b)[i++] = c;
 	return (b);
 }

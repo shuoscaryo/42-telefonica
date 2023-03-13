@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orudek <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: orudek <orudk@student.42madrid.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 14:33:22 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/07 14:33:51 by orudek           ###   ########.fr       */
+/*   Created: 2023/02/06 21:17:42 by orudek            #+#    #+#             */
+/*   Updated: 2023/03/07 13:49:47 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void *b, unsigned int len)
+int	ft_isalpha(int c)
 {
-	int	i;
-
-	i = 0;
-	while (i < len)
-		((unsigned char *)b)[i++] = 0;
-	return (b);
+	if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z'))
+		return (0);
+	return (1);
 }

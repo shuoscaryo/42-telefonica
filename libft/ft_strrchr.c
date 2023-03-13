@@ -1,21 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   strrchr.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orudek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 14:33:22 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/07 14:33:51 by orudek           ###   ########.fr       */
+/*   Created: 2023/03/07 15:56:12 by orudek            #+#    #+#             */
+/*   Updated: 2023/03/07 16:04:46 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void *b, unsigned int len)
+char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	char	*last;
 
-	i = 0;
-	while (i < len)
-		((unsigned char *)b)[i++] = 0;
-	return (b);
+	last = 0;
+	while (*s)
+	{
+		if (*s == c)
+			last = (char *)s;
+		s++;
+	}
+	if (!c)
+		return ((char *)s);
+	return (last);
 }
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main(int c, char **v)
+{
+	if ( c == 3)
+	{
+		printf("mio>>%s\n",ft_strrchr(v[1],v[2][0]));
+		printf("oficial>>%s\n",strrchr(v[1],v[2][0]));
+	}
+	return (1);
+}*/

@@ -1,21 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orudek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 14:33:22 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/07 14:33:51 by orudek           ###   ########.fr       */
+/*   Created: 2023/03/07 14:35:02 by orudek            #+#    #+#             */
+/*   Updated: 2023/03/07 15:37:01 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void *b, unsigned int len)
+static int	ft_strlen(char *str)
 {
-	int	i;
+	int	count;
 
+	count = 0;
+	while (*str++)
+		count++;
+	return (count);
+}
+
+void	*ft_memmove(void *dst, const void *src, unsigned int len)
+{
+	unsigned int	i;
+	int				src_len;
+	char			*out;
+	const char		*in;
+
+	out = dst;
+	in = src;
 	i = 0;
+	if (out < in) // no esta terminado
 	while (i < len)
-		((unsigned char *)b)[i++] = 0;
-	return (b);
+	{
+		if (out >= in && out <= in + src_len)
+			break ;
+		out++ = in++;
+		i++;
+	}
+	return (dst);
 }

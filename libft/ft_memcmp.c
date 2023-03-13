@@ -1,21 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orudek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 14:33:22 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/07 14:33:51 by orudek           ###   ########.fr       */
+/*   Created: 2023/03/07 16:42:51 by orudek            #+#    #+#             */
+/*   Updated: 2023/03/07 16:46:41 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void *b, unsigned int len)
+int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
+	const char		*in1;
+	const char		*in2;
 
+	in1 = s1;
+	in2 = s2;
 	i = 0;
-	while (i < len)
-		((unsigned char *)b)[i++] = 0;
-	return (b);
+	if (!n)
+		return (0);
+	while (in1[i] && in1[i] == in2[i] && i < n - 1)
+		i++;
+	return (in1[i] - in2[i]);
 }
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main(int c, char **v)
+{
+	if (c)
+	{}
+	printf("%d\n",ft_memcmp(v[1],v[2],3));
+//	printf("%d\n",memcmp(v[1],v[2],10));
+}*/

@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orudek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 14:33:22 by orudek            #+#    #+#             */
-/*   Updated: 2023/03/07 14:33:51 by orudek           ###   ########.fr       */
+/*   Created: 2023/03/07 13:38:36 by orudek            #+#    #+#             */
+/*   Updated: 2023/03/07 13:52:39 by orudek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void *b, unsigned int len)
+int	ft_toupper(int letter)
 {
-	int	i;
-
-	i = 0;
-	while (i < len)
-		((unsigned char *)b)[i++] = 0;
-	return (b);
+	if (letter >= 'a' && letter <= 'z')
+		return (letter + 'A' - 'a');
+	return (letter);
 }
